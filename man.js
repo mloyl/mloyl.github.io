@@ -10,6 +10,9 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   red = color(255,200,200);
   green = color(200,255,200);
+  
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 }
 
 function draw() {
