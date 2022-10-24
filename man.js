@@ -23,6 +23,7 @@ function setup() {
   
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+  consol.log(firebase);
 }
 
 function draw() {
