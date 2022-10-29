@@ -1,15 +1,15 @@
-let red;
-let green;
+let one;
+let two;
 
 var words = ["YES!", "NO!"];
-var colors = ['red','green'];
+var colors = ['one','two'];
 var index = 0;
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  red = color(255,200,200);
-  green = color(200,255,200);
+  one = color(255,200,200);
+  two = color(200,255,200);
 }
 
 function draw() {
@@ -23,7 +23,7 @@ function draw() {
 
 }
 
-function mousePressed() {
+function mouseReleased() {
   index = index+1;
   if (index == words.length) {
     index = 0;
