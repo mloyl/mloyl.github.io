@@ -1,15 +1,15 @@
-let one;
-let two;
+let red;
+let green;
 
 var words = ["YES!", "NO!"];
-var colors = ['one','two'];
+var colors = ['red','green'];
 var index = 0;
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  one = color(255,200,200);
-  two = color(200,255,200);
+  red = color(255,200,200);
+  green = color(200,255,200);
 }
 
 function draw() {
