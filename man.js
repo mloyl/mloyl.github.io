@@ -23,7 +23,7 @@ function draw() {
 
 }
 
-function mouseReleased() {
+function mousePressed() {
   index = index+1;
   if (index == words.length) {
     index = 0;
