@@ -39,7 +39,7 @@ if (mouseX>=3*width/5&&mouseX<=4*width/5&&mouseY>=0&&mouseY<=height/3){
    text('We, the undersigned, are graphic designers, photographers and students who have been \n brought up in a world in which the techniques and apparatus of advertising have persistently \n been presented to us as the most lucrative, effective and desirable means of using our talents. ',width/2, height/3);
    text('We, the undersigned, are designers who have been raised in a world in which we put \n profit over people and the planet in an attempt to grease the wheels of capitalism and \n keep the machine running. ',width/2, 2*height/3);
 }
-if (mouseX>=4*width/5&&mouseX<=width&&mouseY>=0&&mouseY<=width/3){
+if (mouseX>=4*width/5&&mouseX<=width&&mouseY>=0&&mouseY<=height/3){
    text('We have been bombarded with publications devoted to this belief, applauding the work of \n those who have flogged their skill and imagination to sell such things as:',width/2, height/3);
    text('Our time and energy are increasingly used to manufacture demand, to exploit \n populations, to extract resources, to fill landfills, to pollute the air, to promote \n colonization, and to propel our planet’s sixth mass extinction. We have helped to create \n comfortable, happy lives for some of our species and allowed harm to others; \n our designs, at times, serve to exclude, eliminate, and discriminate.',width/2, 2*height/3);
 }
