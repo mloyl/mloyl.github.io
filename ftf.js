@@ -1,4 +1,4 @@
-let wr;
+let pinks;
 let bg;
 
 function setup(){
@@ -10,7 +10,7 @@ function setup(){
 
 
 function preload(){
-  wr = loadImage('ftf_data/writing.png');
+  pinks = loadImage('ftf_data/writing.png');
   bg = loadImage('ftf_data/background.png');
 
 }
@@ -95,5 +95,5 @@ if (mouseX>=4*width/5&&mouseX<=width&&mouseY>=2*height/3&&mouseY<=height){
 }
 }
 function draw(){
-  image(wr,mouseX, mouseY, windowWidth/6, (2*windowHeight)/3);
+  image(pinks,mouseX, mouseY, windowWidth/6, (2*windowHeight)/3);
 }
