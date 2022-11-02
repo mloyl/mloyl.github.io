@@ -1,18 +1,23 @@
+let wr;
+let bg;
+
 function setup(){
-   createCanvas(windowWidth, windowHeight);
+   createCanvas(windowWidth, (1080*windowWidth)/1920);
    console.log("it works!");
+
 
 }
 
 
 function preload(){
+  wr = loadImage('ftf_data/writing.png');
+  bg = loadImage('ftf_data/background.png');
 
 }
 
 function draw(){
-   console.log("windowWidth: "+windowWidth);
 
-   background(0,0,0,20);
+   background(bg);
 
    fill(255);
    textSize(18);
@@ -88,4 +93,7 @@ if (mouseX>=4*width/5&&mouseX<=width&&mouseY>=2*height/3&&mouseY<=height){
    text('With this in mind we propose to share our experience and opinions, and to make them \n available to colleagues, students and others who may be interested.',width/2, height/3);
    text('With the ongoing destruction of essential living systems on our planet, this message \n has only grown more urgent. As we celebrate the 50th anniversary of Earth Day, we \n renew the previous manifestos with a greater sense of urgency as we see the \n compounded effects of our climate crisis unfold before us. It is imperative that we take \n climate action now.',width/2, 2*height/3);
 }
+}
+function draw(){
+  image(wr,mouseX, mouseY, windowWidth/6, (2*windowHeight)/3);
 }
