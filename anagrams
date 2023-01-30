@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrams —— 2022</title>
+</head>
+<style>
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: skyblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+</style>
+<body>
+<body style="background-color:tomato;">
+<center>
+<h2 style="color:white">A zine about anagrams of my name. If you want me to make one for your name you’ll have to pay up, punk . . .</h2><br>
+<img src="zines/anagrams6.png" width="800px"><br>
+<img src="zines/anagrams5.png" width="800px"><br>
+<img src="zines/anagrams4.png" width="800px"><br>
+<img src="zines/anagrams3.png" width="800px"><br>
+<img src="zines/anagrams2.png" width="800px"><br>
+<img src="zines/anagrams1.png" width="800px"><br>
+<h2><a href="zines.html">Back</a></h2>
+</style>
+ </center>
+</body>
+</html>
