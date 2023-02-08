@@ -51,22 +51,26 @@ function init() {
   } else {
     console.log("getUserMedia not supported");
   }
+  
+  delay.delayTime.value = .15;
+  
+  gain.gain.value = 6;
 
-  delayRange.addEventListener('input', function(e) {
+//   delayRange.addEventListener('input', function(e) {
 
-    delay.delayTime.value = this.value / 1000;
-    delayValue.textContent = this.value;
-    localStorage['delayValue'] = this.value / 1000;
+//     delay.delayTime.value = this.value / 1000;
+//     delayValue.textContent = this.value;
+//     localStorage['delayValue'] = this.value / 1000;
 
-  });
+//   });
 
-  gainRange.addEventListener('input', function(e) {
+//   gainRange.addEventListener('input', function(e) {
 
-    gain.gain.value = this.value;
-    gainValue.textContent = parseFloat(this.value).toFixed(1);
-    localStorage['gainValue'] = this.value;
+//     gain.gain.value = this.value;
+//     gainValue.textContent = parseFloat(this.value).toFixed(1);
+//     localStorage['gainValue'] = this.value;
 
-  });
+//   });
 
 }
 
