@@ -4,34 +4,34 @@ function init() {
 
   var context = new AudioContext();
 
-  var delayValue = document.getElementById('delayValue');
+//   var delayValue = document.getElementById('delayValue');
   var delayRange = document.getElementById('delayRange');
 
-  var gainValue = document.getElementById('gainValue');
+//   var gainValue = document.getElementById('gainValue');
   var gainRange = document.getElementById('gainRange');
 
   var gain = context.createGain();
   gain.connect(context.destination);
-  gain.gain.value = 1;
-  if (localStorage['gainValue']) {
-    var v = parseFloat(localStorage['gainValue']);
-    if (v < 1) v = 1;
-    if (v > 10) v = 10;
-    gain.gain.value = v;
-    gainRange.value = v;
-    gainValue.textContent = parseFloat(v).toFixed(1);
+  gain.gain.value = 6;
+//   if (localStorage['gainValue']) {
+//     var v = parseFloat(localStorage['gainValue']);
+//     if (v < 1) v = 1;
+//     if (v > 10) v = 10;
+//     gain.gain.value = v;
+//     gainRange.value = v;
+//     gainValue.textContent = parseFloat(v).toFixed(1);
   }
 
   var delay = context.createDelay();
   delay.connect(gain);
   delay.delayTime.value = .15;
-  if (localStorage['delayValue']) {
-    var v = parseFloat(localStorage['delayValue']);
-    if (v < 0) v = 0;
-    if (v > 1) v = 1;
-    delay.delayTime.value = v;
-    delayRange.value = v * 1000;
-    delayValue.textContent = v * 1000;
+//   if (localStorage['delayValue']) {
+//     var v = parseFloat(localStorage['delayValue']);
+//     if (v < 0) v = 0;
+//     if (v > 1) v = 1;
+//     delay.delayTime.value = v;
+//     delayRange.value = v * 1000;
+//     delayValue.textContent = v * 1000;
   }
 
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
@@ -51,10 +51,6 @@ function init() {
   } else {
     console.log("getUserMedia not supported");
   }
-  
-  delay.delayTime.value = .15;
-  
-  gain.gain.value = 6;
 
 //   delayRange.addEventListener('input', function(e) {
 
