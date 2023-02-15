@@ -4,35 +4,38 @@ function init() {
 
   var context = new AudioContext();
 
-//   var delayValue = document.getElementById('delayValue');
+  var delayValue = document.getElementById('delayValue');
   var delayRange = document.getElementById('delayRange');
 
-//   var gainValue = document.getElementById('gainValue');
+  var gainValue = document.getElementById('gainValue');
   var gainRange = document.getElementById('gainRange');
 
   var gain = context.createGain();
   gain.connect(context.destination);
   gain.gain.value = 6;
-//   if (localStorage['gainValue']) {
-//     var v = parseFloat(localStorage['gainValue']);
-//     if (v < 1) v = 1;
-//     if (v > 10) v = 10;
-//     gain.gain.value = v;
-//     gainRange.value = v;
-//     gainValue.textContent = parseFloat(v).toFixed(1);
+  if (localStorage['gainValue']) {
+    var v = parseFloat(localStorage['gainValue']);
+    if (v < 1) v = 1;
+    if (v > 10) v = 10;
+    gain.gain.value = v;
+    gainRange.value = v;
+    gainValue.textContent = parseFloat(v).toFixed(1);
   }
 
   var delay = context.createDelay();
   delay.connect(gain);
   delay.delayTime.value = .15;
-//   if (localStorage['delayValue']) {
-//     var v = parseFloat(localStorage['delayValue']);
-//     if (v < 0) v = 0;
-//     if (v > 1) v = 1;
-//     delay.delayTime.value = v;
-//     delayRange.value = v * 1000;
-//     delayValue.textContent = v * 1000;
+  if (localStorage['delayValue']) {
+    var v = parseFloat(localStorage['delayValue']);
+    if (v < 0) v = 0;
+    if (v > 1) v = 1;
+    delay.delayTime.value = v;
+    delayRange.value = v * 1000;
+    delayValue.textContent = v * 1000;
   }
+
+  console.log(gain.gain.value);
+  console.log(delay.delayTime.value);
 
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
@@ -52,21 +55,21 @@ function init() {
     console.log("getUserMedia not supported");
   }
 
-//   delayRange.addEventListener('input', function(e) {
+  delayRange.addEventListener('input', function(e) {
 
-//     delay.delayTime.value = this.value / 1000;
-//     delayValue.textContent = this.value;
-//     localStorage['delayValue'] = this.value / 1000;
+    delay.delayTime.value = this.value / 1000;
+    delayValue.textContent = this.value;
+    localStorage['delayValue'] = this.value / 1000;
 
-//   });
+  });
 
-//   gainRange.addEventListener('input', function(e) {
+  gainRange.addEventListener('input', function(e) {
 
-//     gain.gain.value = this.value;
-//     gainValue.textContent = parseFloat(this.value).toFixed(1);
-//     localStorage['gainValue'] = this.value;
+    gain.gain.value = this.value;
+    gainValue.textContent = parseFloat(this.value).toFixed(1);
+    localStorage['gainValue'] = this.value;
 
-//   });
+  });
 
 }
 
@@ -78,6 +81,22 @@ overlay.addEventListener('click', onClick);
 var test = new AudioContext();
 if (test.state === 'running') {
   onClick();
+}
+
+var gif_loadImg, gif_createImg;
+
+function preload() {
+  gif_loadImg = loadImage("gif.gif");
+  gif_createImg = createImg("gif.gif");
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  background(0);
+}
+
+function draw() {
+  gif_createImg.position(0,0);
 }
 
 function onClick() {
