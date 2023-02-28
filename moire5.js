@@ -21,5 +21,5 @@ function draw(){
 
    fill(255);
 
-     image(moire, (mouseX-windowWidth), 0, (2*windowWidth), windowHeight);
+     image(moire, (mouseX-windowWidth), 0, (2.01*windowWidth), windowHeight);
 }
