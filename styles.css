@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "libre_baskervilleregular";
+  margin: 0;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    font-family: "libre_baskervilleitalic";
+    color: white;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    font-family: "libre_baskervilleitalic";
+    color: white;
+  }
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+h2 {
+    font-size: 24px;
+    font-family: "libre_baskervilleitalic";
+ }
+h3 {
+  font-size: 24px;
+}
+
+.black {
+    background-color: black;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+.red {
+  background-color: tomato;
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+.blue {
+    background-color: cornflowerblue;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .violet {
+    background-color: violet;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .violet h3 {
+    margin-top: 0;
+  }
+  .orange {
+    background-color: orange;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .orange h3 {
+    margin-top: 0;
+  }
+  .green {
+    background-color: mediumseagreen;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  a.redlink:link {
+    text-decoration: none;
+    color: tomato;
+
+  }
+  
+  a.redlink:visited {
+    text-decoration: none;
+    color: tomato;
+  }
+  
+  a.redlink:hover {
+    text-decoration: underline;
+    color: tomato;
+  }
+  
+  a.redlink:active {
+    text-decoration: underline;
+    color: tomato;
+  }
+
+
+  a.orangelink:link {
+    text-decoration: none;
+    color: orange;
+
+  }
+  
+  a.orangelink:visited {
+    text-decoration: none;
+    color: orange;
+  }
+  
+  a.orangelink:hover {
+    text-decoration: underline;
+    color: orange;
+  }
+  
+  a.orangelink:active {
+    text-decoration: underline;
+    color: orange;
+  }
+
+
+  a.greenlink:link {
+    text-decoration: none;
+    color: mediumseagreen;
+
+  }
+  
+  a.greenlink:visited {
+    text-decoration: none;
+    color: mediumseagreen;
+  }
+  
+  a.greenlink:hover {
+    text-decoration: underline;
+    font-family: "libre_baskervilleitalic";
+    color: mediumseagreen;
+  }
+  
+  a.greenlink:active {
+    text-decoration: underline;
+    font-family: "libre_baskervilleitalic";
+    color: mediumseagreen;
+  }
+
+  a.bluelink:link {
+    text-decoration: none;
+    color: cornflowerblue;
+
+  }
+  
+  a.bluelink:visited {
+    text-decoration: none;
+    color: cornflowerblue;
+  }
+  
+  a.bluelink:hover {
+    text-decoration: underline;
+    color: cornflowerblue;
+  }
+  
+  a.bluelink:active {
+    text-decoration: underline;
+    color: cornflowerblue;
+  }
+
+  a.violetlink:link {
+    text-decoration: none;
+    color: violet;
+
+  }
+  
+  a.violetlink:visited {
+    text-decoration: none;
+    color: violet;
+  }
+  
+  a.violetlink:hover {
+    text-decoration: underline;
+    color: violet;
+  }
+  
+  a.violetlink:active {
+    text-decoration: underline;
+    color: violet;
+  }
+
+  @font-face {
+    font-family: 'libre_baskervillebold';
+    src: url('fonts/librebaskerville-bold-webfont.woff2') format('woff2'),
+         url('fonts/librebaskerville-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_baskervilleitalic';
+    src: url('fonts/librebaskerville-italic-webfont.woff2') format('woff2'),
+         url('fonts/librebaskerville-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_baskervilleregular';
+    src: url('fonts/librebaskerville-regular-webfont.woff2') format('woff2'),
+         url('fonts/librebaskerville-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
