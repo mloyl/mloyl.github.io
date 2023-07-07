@@ -16,7 +16,6 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-right: 50px;
 }
 
 nav a {
@@ -252,4 +251,13 @@ h3 {
     font-weight: normal;
     font-style: normal;
 
+}
+@media (max-width: 600px) {
+  /* Adjust the image width to 300px on mobile devices */
+  img {
+    width: 300px;
+  }
+  video {
+    width: 300px;
+  }
 }
