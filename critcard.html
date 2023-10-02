@@ -1,0 +1,108 @@
+<html>
+<head>
+  <title>Pick a Crit Card!</title>
+  <style>
+
+  .center {
+    padding: 70px 0;
+    text-align: center;
+  }
+
+    #output {
+      padding: 70px 0;
+      background: black;
+      border-radius: 25px;
+      border: 3px solid #ffcd05;
+      text-align: center;
+      font-family:"uglyhandwriting";
+      font-size: 60px;
+      color: #ffcd05;
+    }
+  </style>
+</head>
+
+
+<body>
+
+<div id="output"></div>
+<br>
+<div class="center">
+  <div>
+    <button>Click to Pick a Crit Card!</button>
+    <button onclick="window.location.href='artcard.html';">
+      Draw an Art Card
+    </button>
+  </div>
+
+  <script>
+
+    var btn = document.querySelector("button");
+    var out = document.getElementById("output");
+
+
+    btn.addEventListener("click", getWord);
+
+    function getWord(){
+
+
+      var theWord= [
+        'If these art pieces were contestants on a cooking show, whose dish would impress the judges more?',
+        'If both artworks had personalities, which one would be the life of the party?',
+        'Which artwork would give the most compelling TED Talk if they were speakers?',
+        'Which formal qualities are the most impressionistic?',
+        'If both artworks were personified, which would win in a fight?',
+        'Which artwork would you want most hanging in your living room?',
+        'Which artwork would a dude bro most likely point at and say "I could do that."?',
+        'If both artworks were personified, which would you want to marry the most?',
+        'Which artwork would be the worst customer at a Wendys?',
+        'Which artwork would "forget their wallet" and make you pay for the first date?',
+        'Which artwork would be preserved in the highest security vault at a museum?',
+        'Which artwork would make the best mural?',
+        'Which artwork captures the spirit of friendship the most?',
+        'Which artwork <3s NY the most?',
+        'Which artwork has formal qualities that most reference Pop Art?',
+        'Which artwork has the best charisma?',
+        'If you were in a burning building, which artwork would you save?',
+        'Which artwork would your eccentric estranged great grand uncle leave you in his will?',
+        'Which artwork would you rather put in your dating profile?',
+        'Which artwork would you rather hang above your bed?',
+        'Which artwork would you rather have hanging in your bathroom?',
+        'Which artwork most likely smells the worst?',
+        'If you had to apply to art school, which artwork would you put in your portfolio?',
+        'If you were a genie which artwork would you grant three wishes to?',
+        'Which artwork most resembles your phone wallpaper?',
+        'Which artwork would you want to grab a coffee with?',
+        'Which artwork would make the best album cover?',
+        'Which artwork would win Miss Universe?',
+        'If each artwork was a professor, whose class would you take?',
+        'Which artwork would be the best at understanding quantum mechanics?',
+        'Which artwork is the best at cooking?',
+        'What artwork would be featured in the National Gallery?',
+        'If both artworks were printed on T-shirts, which one would sell out first?',
+        'What artwork has the best fashion sense?',
+        'Which artwork would win class clown?',
+        'Which artwork would make the worse barista at Starbucks?',
+        'Which artwork would be the most likely to win an Olympic gold metal?',
+        'Which artwork always cheats at cards?',
+        'Which artwork would win in a game of chess?',
+        'Which artwork would make the better ice cream flavor?',
+        'Which artwork would be the host of a game show?',
+        'Which artwork would win on Jeopardy?',
+        'Which artwork would be launched into space to preserve the legacy of humankind?',
+        'Which artwork has the best fashion sense?',
+        'Which artwork would make the best major motion picture?',
+        'Which artwork would win in Mario Kart?',
+        'Which artwork would like Dr. Pepper the most?',
+        'Which artwork would have the most complicated Starbucks order?',
+        'Which artwork would you choose for your phone background?',
+      ];
+
+
+      var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+      output.textContent = theWord[wordNum];
+    }
+</script>
+</body>
+</html>

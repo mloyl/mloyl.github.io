@@ -1,28 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pick Your Art Card!</title>
+  <title>Pick an Art Card!</title>
+  <style>
 
-    <style>
-     body {
-        padding: 0;
-        margin: 0;
+  .center {
+    padding: 70px 0;
+    text-align: center;
+  }
 
-     }
-
-
-    </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" integrity="sha512-w1Bktzax55ZbjW5Mqjz8+mKz4KqRjEUU35Dpq/ath29yskKqIGwNIHiFNp03m/OiJWDXvdQ1/g6aV+l4PeVO7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="artcard.js"></script>
-
-
-
+    #output {
+      padding: 70px 0;
+      background: #ffcd05;
+      border-radius: 25px;
+      border: 3px solid black;
+      text-align: center;
+      font-family:"uglyhandwriting";
+      font-size: 60px;
+    }
+  </style>
 </head>
+
+
 <body>
 
+<div id="output"></div>
+<br>
+<div class="center">
+  <div>
+    <button>Click to Pick an Art Card!</button>
+    <button onclick="window.location.href='critcard.html';">
+      Draw a Crit Card
+    </button>
+  </div>
+
+  <script>
+
+    var btn = document.querySelector("button");
+    var out = document.getElementById("output");
+
+
+    btn.addEventListener("click", getWord);
+
+    function getWord(){
+
+
+      var theWord= [
+        'Ghosts doing vigorous jazz hands',
+        'The bachelorette season finale',
+        'A tiny horse',
+        'Parrots eating carrots',
+        'Self portrait of the artist as an old lady',
+        'An uncomfortable chair',
+        'Becoming a blueberry',
+        'Crab rangoon',
+        'A caterpillar on a date',
+        'A disappointing birthday party',
+        'A Big Mac (TM)',
+        'The Little Engine that Could',
+        'Recreational EpiPen use',
+        'The best sandwich you’ve ever eaten',
+        'Toes where they shouldn’t be',
+        'Firefighters on fire',
+        'A volcano of iced coffee',
+        'A broken umbrella',
+        'A sad gorilla',
+        'Pickles on pizza',
+        'A starfish birthday party',
+        'Your favorite animal riding a bicycle',
+        'Disco chickens',
+        'A clock with real hands',
+        'An alive fire extinguisher',
+        'A stairway to nowhere',
+        'Astronaut lizards',
+        'A flea circus',
+        'Headphones that hurt you',
+        'A giant spooky spider',
+        'A self portrait drawn upside down',
+        'Mermaids out to brunch',
+        'Stinky gym socks',
+        'A car for dogs',
+        'An angry computer',
+        'An action movie star',
+        'At cat drinking tea',
+        'Ducks!',
+        'Moving into the dorms',
+        'Pratt cats',
+        'New York City pigeons',
+        'A $3.00 bill',
+        'Ceramics class gone wrong',
+        'A balloon dog',
+        'A kitten playing basketball',
+        'Inventing sliced bread',
+        'A sitcom reunion special',
+        'Wizard Fight!!!!!!',
+        'A dad listening to Classic Rock',
+        'A Tetris competition',
+      ];
+
+
+      var wordNum = Math.floor(Math.random() * theWord.length);
+
+
+      output.textContent = theWord[wordNum];
+    }
+</script>
 </body>
 </html>
