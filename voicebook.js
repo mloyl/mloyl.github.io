@@ -14,12 +14,12 @@ function preload() {
 }
 
 function setup(){
-
+  getAudioContext().suspend();
   mic = new p5.AudioIn();
   mic.start();
-
+  
    createCanvas(windowWidth, windowHeight);
-
+   
 
 
    console.log("it works!");
@@ -43,4 +43,7 @@ function draw() {
       startPause=millis();
       chosen=random(pages);
    }
+}
+function mousePressed() {
+  userStartAudio();
 }
