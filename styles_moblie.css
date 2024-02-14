@@ -1,0 +1,122 @@
+
+@font-face {
+  font-family: 'libre_baskervilleitalic';
+  src: url('fonts/librebaskerville-italic-webfont.woff2') format('woff2'),
+       url('fonts/librebaskerville-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'libre_baskervilleregular';
+  src: url('fonts/librebaskerville-regular-webfont.woff2') format('woff2'),
+       url('fonts/librebaskerville-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.container {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: no-wrap;
+  overflow-x: auto;
+background:black;
+margin-bottom: 40px;
+margin-top: 20px;
+ cursor: ew-resize;
+position: relative;
+}
+
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+
+.scrolls {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0px;
+  height: 400px;
+  white-space: nowrap;
+}
+
+.imageDiv img {
+  height: 400px;
+  max-width: 80%;
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
+.collapsible {
+  font-size: 24px;
+  font-family: 'libre_baskervilleregular';
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    padding-left: 20px;
+    width: 80%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+button:hover {
+  font-size: 24px;
+  font-family: "libre_baskervilleitalic";
+  color: tomato;
+}
+
+
+.content {
+  font-size: 24px;
+  font-family: 'libre_baskervilleregular';
+  margin-bottom: 40px;
+  margin-top: 20px;
+    display: none;
+    color: white;
+    padding-left: 40px;
+    background-color: black;
+    width: 80%;
+    overflow: none;
+}
+
+@media (max-width: 600px) {
+  /* Adjust the image width to 300px on mobile devices */
+  img {
+    height: 100px;
+  }
+  video {
+    height: 100px;
+  }
+}
+a:link {
+    text-decoration: none;
+    color: white;
+
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    font-family: "libre_baskervilleitalic";
+    color: tomato;
+  }
+
+  a:active {
+    font-family: "libre_baskervilleitalic";
+    color: tomato;
+  }
