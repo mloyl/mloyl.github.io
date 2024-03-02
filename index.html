@@ -7,114 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Molly Weckesser . . .</title>
   <link rel="stylesheet" href="styles_desktop.css">
-  <script>
-    // Preload images
-    function preloadImages() {
-      var imageSources = [
-        'assets/aasta01.png',
-        'assets/aasta02.png',
-        'assets/aasta05.png',
-        'assets/aasta06.png',
-        'assets/aasta07.png',
-        'assets/ABG01.png',
-        'assets/ABG02.png',
-        'assets/ABG03.png',
-        'assets/ABG04.png',
-        'assets/ABG05.png',
-        'assets/ABG06.png',
-        'assets/ABG07.png',
-        'assets/ABG08.png',
-        'assets/ABG09.png',
-        'assets/ABG10.gif',
-        'assets/ABG11.gif',
-        'assets/anagrams_01.jpeg',
-        'assets/anagrams_02.jpeg',
-        'assets/lp_01.jpeg',
-        'assets/lp_02.jpeg',
-        'assets/sunbound01.png',
-        'assets/sunbound02.png',
-        'assets/sunbound03.png',
-        'assets/sunbound04.png',
-        'assets/sunbound05.png',
-        'assets/things_01.jpeg',
-        'assets/things_02.jpeg',
-        'assets/things_03.jpeg',
-        'assets/things_04.jpeg',
-        'assets/vermin_01.jpeg',
-        'assets/vermin_02.jpeg',
-        'assets/someglasses01.JPG',
-        'assets/someglasses02.JPG',
-        'assets/someglasses03.JPG',
-        'assets/someglasses04.JPG',
-        'assets/someglasses05.JPG',
-        'assets/someglasses06.JPG',
-        'assets/tshirt_01.jpg',
-        'assets/tshirt_02.jpg',
-        'assets/tshirt_03.jpg',
-        'assets/tshirt_04.jpg',
-        'assets/memeex01.jpg',
-        'assets/memeex02.jpg',
-        'assets/memeex03.jpg',
-        'assets/memeex04.jpg',
-        'assets/picturebook_01.jpeg',
-        'assets/picturebook_02.jpeg',
-        'assets/picturebook_03.jpeg',
-        'assets/picturebook_04.jpeg',
-        'assets/picturebook_05.jpeg',
-        'assets/picturebook_06.jpeg',
-        'assets/picturebook_07.jpeg',
-        'assets/WDYM02.mp4',
-        'assets/WDYM05.gif',
-        'assets/WDYM09.gif',
-        'assets/WDYM010.jpg',
-        'assets/WDYM011.gif',
-        'assets/WDYM012.gif',
-        'assets/WDYM013.gif',
-        'assets/WDYM015.gif',
-        'assets/WDYM017.jpg',
-        'assets/WDYM019.jpg',
-        'assets/WDYM020.png',
-      ];
-
-      imageSources.forEach(function(source) {
-        var img = new Image();
-        img.src = source;
-      });
-    }
-
-    // Call the preloadImages function when the window has finished loading
-    window.onload = preloadImages;
-  </script>
-  <script>
-  let isDragging = false;
-  let startPosition = 0;
-  let currentTranslate = 0;
-
-  const container = document.querySelector('.container');
-
-  container.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startPosition = e.pageX - currentTranslate;
-    container.style.cursor = 'grabbing';
-  });
-
-  container.addEventListener('mouseup', () => {
-    isDragging = false;
-    container.style.cursor = 'ew-resize';
-  });
-
-  container.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const newPosition = e.pageX - startPosition;
-    currentTranslate = newPosition;
-    setTransform();
-  });
-
-  function setTransform() {
-    container.style.transform = `translateX(${currentTranslate}px)`;
-  }
-</script>
-
 </head>
 <body style="background-color:black;">
 <title>Molly Weckesser . . .</title>
@@ -292,6 +184,114 @@
     <a href="https://www.linkedin.com/in/molly-weckesser-985045266/" target=”_blank” style="cursor:sw-resize">Look at my Linkedin.</a>
   </div>
 </div>
+
+   <script>
+    // Preload images
+    function preloadImages() {
+      var imageSources = [
+        'assets/aasta01.png',
+        'assets/aasta02.png',
+        'assets/aasta05.png',
+        'assets/aasta06.png',
+        'assets/aasta07.png',
+        'assets/ABG01.png',
+        'assets/ABG02.png',
+        'assets/ABG03.png',
+        'assets/ABG04.png',
+        'assets/ABG05.png',
+        'assets/ABG06.png',
+        'assets/ABG07.png',
+        'assets/ABG08.png',
+        'assets/ABG09.png',
+        'assets/ABG10.gif',
+        'assets/ABG11.gif',
+        'assets/anagrams_01.jpeg',
+        'assets/anagrams_02.jpeg',
+        'assets/lp_01.jpeg',
+        'assets/lp_02.jpeg',
+        'assets/sunbound01.png',
+        'assets/sunbound02.png',
+        'assets/sunbound03.png',
+        'assets/sunbound04.png',
+        'assets/sunbound05.png',
+        'assets/things_01.jpeg',
+        'assets/things_02.jpeg',
+        'assets/things_03.jpeg',
+        'assets/things_04.jpeg',
+        'assets/vermin_01.jpeg',
+        'assets/vermin_02.jpeg',
+        'assets/someglasses01.JPG',
+        'assets/someglasses02.JPG',
+        'assets/someglasses03.JPG',
+        'assets/someglasses04.JPG',
+        'assets/someglasses05.JPG',
+        'assets/someglasses06.JPG',
+        'assets/tshirt_01.jpg',
+        'assets/tshirt_02.jpg',
+        'assets/tshirt_03.jpg',
+        'assets/tshirt_04.jpg',
+        'assets/memeex01.jpg',
+        'assets/memeex02.jpg',
+        'assets/memeex03.jpg',
+        'assets/memeex04.jpg',
+        'assets/picturebook_01.jpeg',
+        'assets/picturebook_02.jpeg',
+        'assets/picturebook_03.jpeg',
+        'assets/picturebook_04.jpeg',
+        'assets/picturebook_05.jpeg',
+        'assets/picturebook_06.jpeg',
+        'assets/picturebook_07.jpeg',
+        'assets/WDYM02.mp4',
+        'assets/WDYM05.gif',
+        'assets/WDYM09.gif',
+        'assets/WDYM010.jpg',
+        'assets/WDYM011.gif',
+        'assets/WDYM012.gif',
+        'assets/WDYM013.gif',
+        'assets/WDYM015.gif',
+        'assets/WDYM017.jpg',
+        'assets/WDYM019.jpg',
+        'assets/WDYM020.png',
+      ];
+
+      imageSources.forEach(function(source) {
+        var img = new Image();
+        img.src = source;
+      });
+    }
+
+    // Call the preloadImages function when the window has finished loading
+    window.onload = preloadImages;
+  </script>
+  <script>
+  let isDragging = false;
+  let startPosition = 0;
+  let currentTranslate = 0;
+
+  const container = document.querySelector('.container');
+
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startPosition = e.pageX - currentTranslate;
+    container.style.cursor = 'grabbing';
+  });
+
+  container.addEventListener('mouseup', () => {
+    isDragging = false;
+    container.style.cursor = 'ew-resize';
+  });
+
+  container.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const newPosition = e.pageX - startPosition;
+    currentTranslate = newPosition;
+    setTransform();
+  });
+
+  function setTransform() {
+    container.style.transform = `translateX(${currentTranslate}px)`;
+  }
+</script>
 
 
 <script>
