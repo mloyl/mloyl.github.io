@@ -30,6 +30,7 @@ background:black;
 margin-bottom: 40px;
 margin-top: 20px;
  cursor: ew-resize;
+    float:left;
 position: relative;
 }
 
@@ -43,6 +44,7 @@ position: relative;
 
 
 .scrolls {
+    float:left;
   overflow-x: hidden;
   overflow-y: hidden;
   margin: 0px;
