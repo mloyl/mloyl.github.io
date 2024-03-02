@@ -267,31 +267,33 @@
 <script>
 let mouseDown = false;
 let startX, scrollLeft;
-const slider = document.querySelectorAll('.container');
+const sliders = document.querySelectorAll('.container');
 
 const startDragging = (e) => {
   mouseDown = true;
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
+  startX = e.pageX - e.currentTarget.offsetLeft;
+  scrollLeft = e.currentTarget.scrollLeft;
 }
 
-const stopDragging = (e) => {
+const stopDragging = () => {
   mouseDown = false;
 }
 
 const move = (e) => {
   e.preventDefault();
-  if(!mouseDown) { return; }
-  const x = e.pageX - slider.offsetLeft;
+  if (!mouseDown) { return; }
+  const x = e.pageX - e.currentTarget.offsetLeft;
   const scroll = x - startX;
-  slider.scrollLeft = scrollLeft - scroll;
+  e.currentTarget.scrollLeft = scrollLeft - scroll;
 }
 
-// Add the event listeners
-slider.addEventListener('mousemove', move, false);
-slider.addEventListener('mousedown', startDragging, false);
-slider.addEventListener('mouseup', stopDragging, false);
-slider.addEventListener('mouseleave', stopDragging, false);
+// Add the event listeners to each slider
+sliders.forEach(slider => {
+  slider.addEventListener('mousemove', move, false);
+  slider.addEventListener('mousedown', startDragging, false);
+  slider.addEventListener('mouseup', stopDragging, false);
+  slider.addEventListener('mouseleave', stopDragging, false);
+});
 
     </script>
 
