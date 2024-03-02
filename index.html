@@ -85,6 +85,36 @@
     // Call the preloadImages function when the window has finished loading
     window.onload = preloadImages;
   </script>
+  <script>
+  let isDragging = false;
+  let startPosition = 0;
+  let currentTranslate = 0;
+
+  const container = document.querySelector('.container');
+
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startPosition = e.pageX - currentTranslate;
+    container.style.cursor = 'grabbing';
+  });
+
+  container.addEventListener('mouseup', () => {
+    isDragging = false;
+    container.style.cursor = 'ew-resize';
+  });
+
+  container.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const newPosition = e.pageX - startPosition;
+    currentTranslate = newPosition;
+    setTransform();
+  });
+
+  function setTransform() {
+    container.style.transform = `translateX(${currentTranslate}px)`;
+  }
+</script>
+
 </head>
 <body style="background-color:black;">
 <title>Molly Weckesser . . .</title>
