@@ -265,38 +265,35 @@
   </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    let isDragging = false;
-    let startPosition = 0;
-    let currentTranslate = 0;
+let mouseDown = false;
+let startX, scrollLeft;
+const slider = document.querySelectorAll('.container');
 
-    const containers = document.querySelectorAll('.container');
+const startDragging = (e) => {
+  mouseDown = true;
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+}
 
-    containers.forEach(container => {
-      container.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startPosition = e.pageX - currentTranslate;
-        container.style.cursor = 'grabbing';
-      });
+const stopDragging = (e) => {
+  mouseDown = false;
+}
 
-      container.addEventListener('mouseup', () => {
-        isDragging = false;
-        container.style.cursor = 'ew-resize';
-      });
+const move = (e) => {
+  e.preventDefault();
+  if(!mouseDown) { return; }
+  const x = e.pageX - slider.offsetLeft;
+  const scroll = x - startX;
+  slider.scrollLeft = scrollLeft - scroll;
+}
 
-      container.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const newPosition = e.pageX - startPosition;
-        currentTranslate = newPosition;
-        setTransform(container);
-      });
-    });
+// Add the event listeners
+slider.addEventListener('mousemove', move, false);
+slider.addEventListener('mousedown', startDragging, false);
+slider.addEventListener('mouseup', stopDragging, false);
+slider.addEventListener('mouseleave', stopDragging, false);
 
-    function setTransform(container) {
-      container.style.transform = `translateX(${currentTranslate}px)`;
-    }
-  });
-</script>
+    </script>
 
 
 
