@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Rhizome</title>
+  <style>
+  <style>
+  @font-face {
+    font-family: 'libre_baskervilleitalic';
+    src: url('rhizome/fonts/librebaskerville-italic-webfont.woff2') format('woff2'),
+         url('rhizome/fonts/librebaskerville-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'libre_baskervilleregular';
+    src: url('rhizome/fonts/librebaskerville-regular-webfont.woff2') format('woff2'),
+         url('rhizome/fonts/librebaskerville-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+
+    body {
+      font-family: 'libre_baskervilleregular';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0; /* Remove default margin */
+      background-color: navajowhite; /* Body background color */
+    }
+
+
+        h1 {
+          font-size: 24px; /* Font size */
+          color: firebrick; /* Button background color */
+        }
+        .button-container {
+          text-align: center;
+        }
+
+        /* Style for button link */
+        .random-link-button {
+          color: firebrick; /* Button background color */
+          font-size: 24px; /* Font size */
+        }
+    </style>
+</head>
+<body>
+  <div class="button-container">
+    <h1>Rhizome . . .</h1>
+    <!-- Button link to trigger random link -->
+    <a href="#" class="random-link-button">Start</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // List of links
+      var links = [
+        "rhizome/chloe.html",
+  "rhizome/lex.html",
+  "rhizome/taylor.html",
+  "rhizome/cass.html",
+  "rhizome/conan.html",
+  "rhizome/grace.html",
+  "rhizome/maura.html",
+  "rhizome/cari.html",
+  "rhizome/dog.html",
+  "rhizome/summer.html",
+  "rhizome/show.html",
+  "rhizome/school.html",
+  "rhizome/imaginary.html",
+  "rhizome/madeup.html",
+  "rhizome/farty.html",
+  "rhizome/choking.html",
+  "rhizome/marshfield.html",
+      ];
+
+      // Function to redirect to a random link
+      function redirectToRandomLink() {
+        var randomIndex = Math.floor(Math.random() * links.length);
+        var randomLink = links[randomIndex];
+        window.location.href = randomLink;
+      }
+
+      // Event listener for button link click
+      document.querySelector('.random-link-button').addEventListener('click', redirectToRandomLink);
+    });
+  </script>
+</body>
+</html>
